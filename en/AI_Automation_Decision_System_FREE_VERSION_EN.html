@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Smart Automation Framework - Professional Edition</title>
+ <style>
+/* 
+ * SMART AUTOMATION FRAMEWORK
+ * CSS styles according to brand guidelines
+ */
+
+/* ==================== COLORS ==================== */
+:root {
+ --primary: #2C3E50;
+ --accent: #3498DB;
+ --success: #2ECC71;
+ --warning: #E67E22;
+ --danger: #E74C3C;
+ --light-gray: #ECF0F1;
+ --dark-gray: #7F8C8D;
+ --white: #FFFFFF;
+}
+
+/* ==================== BASE STYLES ==================== */
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ font-family: 'Calibri', 'DejaVu Sans', Arial, sans-serif;
+ font-size: 11pt;
+ line-height: 1.5;
+ color: var(--primary);
+ background-color: var(--white);
+ max-width: 210mm; /* A4 width */
+ margin: 0 auto;
+ padding: 25mm; /* Margins 2.5cm */
+}
+
+/* ==================== TYPOGRAPHY ==================== */
+
+h1 {
+ font-size: 24pt;
+ font-weight: bold;
+ color: var(--primary);
+ margin-top: 40px;
+ margin-bottom: 20px;
+ line-height: 1.2;
+ page-break-after: avoid;
+}
+
+h2 {
+ font-size: 18pt;
+ font-weight: bold;
+ color: var(--accent);
+ margin-top: 30px;
+ margin-bottom: 15px;
+ line-height: 1.2;
+ page-break-after: avoid;
+}
+
+h3 {
+ font-size: 14pt;
+ font-weight: bold;
+ color: var(--primary);
+ margin-top: 25px;
+ margin-bottom: 12px;
+ line-height: 1.2;
+ page-break-after: avoid;
+}
+
+h4 {
+ font-size: 12pt;
+ font-weight: bold;
+ color: var(--primary);
+ margin-top: 20px;
+ margin-bottom: 10px;
+}
+
+p {
+ margin-bottom: 15px;
+ text-align: justify;
+}
+
+/* ==================== LISTS ==================== */
+
+ul, ol {
+ margin-bottom: 15px;
+ margin-left: 25px;
+}
+
+li {
+ margin-bottom: 8px;
+ line-height: 1.4;
+}
+
+/* ==================== TABLES ==================== */
+
+table {
+ width: 100%;
+ border-collapse: collapse;
+ margin: 20px 0;
+ page-break-inside: avoid;
+}
+
+thead {
+ background-color: var(--accent);
+ color: var(--white);
+}
+
+th {
+ padding: 12px 15px;
+ text-align: left;
+ font-weight: bold;
+ border: 1px solid var(--dark-gray);
+}
+
+td {
+ padding: 10px 15px;
+ border: 1px solid var(--dark-gray);
+}
+
+tbody tr:nth-child(even) {
+ background-color: var(--light-gray);
+}
+
+tbody tr:nth-child(odd) {
+ background-color: var(--white);
+}
+
+/* ==================== INFO BLOCKS ==================== */
+
+.info-block {
+ margin: 20px 0;
+ padding: 15px 20px;
+ border-left: 5px solid;
+ page-break-inside: avoid;
+}
+
+.tip {
+ background-color: var(--light-gray);
+ border-left-color: var(--success);
+}
+
+.tip::before {
+ content: "💡 ";
+ font-size: 14pt;
+}
+
+.warning {
+ background-color: #FEF5E7;
+ border-left-color: var(--warning);
+}
+
+.warning::before {
+ content: "⚠️ ";
+ font-size: 14pt;
+}
+
+.danger {
+ background-color: #FADBD8;
+ border-left-color: var(--danger);
+}
+
+.danger::before {
+ content: "❌ ";
+ font-size: 14pt;
+}
+
+.example {
+ background-color: var(--light-gray);
+ border-left-color: var(--accent);
+}
+
+.example::before {
+ content: "📝 ";
+ font-size: 14pt;
+}
+
+/* ==================== CODE AND QUOTES ==================== */
+
+code {
+ background-color: var(--light-gray);
+ padding: 2px 6px;
+ border-radius: 3px;
+ font-family: 'Courier New', monospace;
+ font-size: 10pt;
+}
+
+pre {
+ background-color: var(--light-gray);
+ padding: 15px;
+ border-radius: 5px;
+ overflow-x: auto;
+ margin: 20px 0;
+ page-break-inside: avoid;
+}
+
+pre code {
+ background-color: transparent;
+ padding: 0;
+}
+
+blockquote {
+ border-left: 4px solid var(--accent);
+ padding-left: 20px;
+ margin: 20px 0;
+ font-style: italic;
+ color: var(--dark-gray);
+}
+
+/* ==================== DECORATIVE ELEMENTS ==================== */
+
+hr {
+ border: none;
+ height: 3px;
+ background-color: var(--accent);
+ margin: 30px 0;
+}
+
+.separator {
+ border: none;
+ height: 5px;
+ background-color: var(--primary);
+ margin: 40px 0;
+}
+
+/* ==================== COVER ==================== */
+
+.cover {
+ text-align: center;
+ padding: 80px 50px 50px 50px;
+ background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+ color: var(--white);
+ page-break-after: always;
+ height: 257mm; /* A4 height minus margins */
+ max-height: 257mm;
+ overflow: hidden;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ box-sizing: border-box;
+}
+
+.cover h1 {
+ font-size: 42pt;
+ color: var(--white);
+ margin: 20px 0;
+ text-transform: uppercase;
+ line-height: 1.1;
+}
+
+.cover .subtitle {
+ font-size: 20pt;
+ color: var(--light-gray);
+ margin: 15px 0;
+ line-height: 1.3;
+}
+
+.cover .features {
+ margin: 30px 0;
+ font-size: 14pt;
+ text-align: left;
+ display: inline-block;
+}
+
+.cover .features p {
+ margin: 8px 0;
+}
+
+.cover .copyright {
+ font-size: 12pt;
+ color: var(--light-gray);
+ margin-top: 50px;
+}
+
+/* ==================== TABLE OF CONTENTS ==================== */
+
+.toc {
+ page-break-after: always;
+ padding: 30px 0;
+}
+
+.toc h1 {
+ color: var(--primary);
+ border-bottom: 3px solid var(--accent);
+ padding-bottom: 15px;
+}
+
+.toc ul {
+ list-style: none;
+ margin-left: 0;
+}
+
+.toc > ul > li {
+ margin: 15px 0;
+ font-weight: bold;
+ font-size: 14pt;
+}
+
+.toc ul ul li {
+ margin: 8px 0 8px 20px;
+ font-weight: normal;
+ font-size: 12pt;
+}
+
+.toc a {
+ text-decoration: none;
+ color: var(--primary);
+}
+
+.toc a:hover {
+ color: var(--accent);
+ text-decoration: underline;
+}
+
+/* ==================== FOOTER ==================== */
+
+.footer {
+ text-align: center;
+ font-size: 9pt;
+ color: var(--dark-gray);
+ margin-top: 50px;
+ padding-top: 20px;
+ border-top: 1px solid var(--light-gray);
+}
+
+/* ==================== PAGES ==================== */
+
+.page-break {
+ page-break-after: always;
+}
+
+.no-break {
+ page-break-inside: avoid;
+}
+
+/* ==================== ACCENTS AND HIGHLIGHTS ==================== */
+
+strong, b {
+ font-weight: bold;
+ color: var(--primary);
+}
+
+em, i {
+ font-style: italic;
+}
+
+mark {
+ background-color: #FFF3CD;
+ padding: 2px 4px;
+}
+
+.highlight {
+ background-color: var(--light-gray);
+ padding: 10px 15px;
+ border-radius: 5px;
+ margin: 15px 0;
+}
+
+/* ==================== BUTTONS AND LINKS ==================== */
+
+a {
+ color: var(--accent);
+ text-decoration: none;
+}
+
+a:hover {
+ text-decoration: underline;
+}
+
+.button {
+ display: inline-block;
+ padding: 12px 30px;
+ background-color: var(--accent);
+ color: var(--white);
+ text-decoration: none;
+ border-radius: 5px;
+ font-weight: bold;
+ margin: 10px 0;
+}
+
+.button:hover {
+ background-color: var(--primary);
+}
+
+/* ==================== SPECIAL ELEMENTS ==================== */
+
+.checklist li::before {
+ content: "☐ ";
+ color: var(--accent);
+ font-weight: bold;
+}
+
+.checklist li.checked::before {
+ content: "✓ ";
+ color: var(--success);
+}
+
+.formula {
+ background-color: var(--light-gray);
+ padding: 15px;
+ margin: 20px 0;
+ border-left: 4px solid var(--accent);
+ font-family: 'Courier New', monospace;
+}
+
+/* ==================== PRINT ADAPTATION ==================== */
+
+@media print {
+ body {
+ max-width: 100%;
+ padding: 0;
+ margin: 0;
+ }
+ 
+ @page {
+ size: A4;
+ margin: 20mm;
+ }
+ 
+ .cover {
+ height: 257mm;
+ max-height: 257mm;
+ padding: 60px 40px;
+ page-break-after: always;
+ page-break-inside: avoid;
+ }
+ 
+ .cover h1 {
+ font-size: 38pt;
+ margin: 15px 0;
+ }
+ 
+ .cover .subtitle {
+ font-size: 18pt;
+ margin: 12px 0;
+ }
+ 
+ .cover .features {
+ margin: 25px 0;
+ font-size: 13pt;
+ }
+ 
+ .cover .copyright {
+ margin-top: 40px;
+ font-size: 11pt;
+ }
+ 
+ a {
+ color: var(--primary);
+ text-decoration: none;
+ }
+ 
+ .no-print {
+ display: none;
+ }
+ 
+ h1, h2, h3 {
+ page-break-after: avoid;
+ }
+ 
+ .page-break {
+ page-break-before: always;
+ }
+}
+
+/* ==================== SUMMARIES AND CONCLUSIONS ==================== */
+
+.summary {
+ background-color: var(--light-gray);
+ padding: 20px;
+ border-left: 5px solid var(--success);
+ margin: 30px 0;
+ page-break-inside: avoid;
+}
+
+.summary h3 {
+ color: var(--success);
+ margin-top: 0;
+}
+
+.conclusion {
+ background-color: #E8F8F5;
+ padding: 20px;
+ border-left: 5px solid var(--accent);
+ margin: 30px 0;
+ page-break-inside: avoid;
+}
+
+/* ==================== PART NUMBERING ==================== */
+
+.part-number {
+ font-size: 36pt;
+ font-weight: bold;
+ color: var(--accent);
+ text-align: center;
+ margin: 50px 0 20px 0;
+}
+
+.part-title {
+ font-size: 28pt;
+ font-weight: bold;
+ color: var(--primary);
+ text-align: center;
+ margin-bottom: 40px;
+}
+
+ 
+/* ==================== MOBILE ADAPTATION ==================== */
+
+@media screen and (max-width: 768px) {
+ 
+ /* Remove fixed width on mobile */
+ body {
+  max-width: 100%;
+  padding: 15px;
+  font-size: 10pt;
+ }
+ 
+ /* Smaller headings on mobile */
+ h1 {
+  font-size: 18pt;
+  margin-top: 20px;
+ }
+ 
+ h2 {
+  font-size: 14pt;
+  margin-top: 15px;
+ }
+ 
+ h3 {
+  font-size: 12pt;
+  margin-top: 12px;
+ }
+ 
+ h4 {
+  font-size: 11pt;
+ }
+ 
+ /* TABLES - make responsive */
+ table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  font-size: 9pt;
+ }
+ 
+ td, th {
+  padding: 8px 10px;
+  min-width: 80px;
+ }
+ 
+ /* Code blocks - horizontal scroll */
+ pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: 8pt;
+  padding: 10px;
+ }
+ 
+ /* Info blocks */
+ .info-block {
+  padding: 12px 15px;
+  margin: 15px 0;
+ }
+ 
+ /* Lists - less padding */
+ ul, ol {
+  margin-left: 15px;
+  font-size: 9.5pt;
+ }
+ 
+ li {
+  margin-bottom: 6px;
+ }
+ 
+ /* Cover */
+ .cover h1 {
+  font-size: 20pt;
+ }
+ 
+ .cover .subtitle {
+  font-size: 11pt;
+ }
+ 
+ .cover .features p {
+  font-size: 9pt;
+ }
+ 
+}
+
+/* For very small screens (iPhone SE etc.) */
+@media screen and (max-width: 375px) {
+ 
+ body {
+  padding: 10px;
+  font-size: 9pt;
+ }
+ 
+ h1 { font-size: 16pt; }
+ h2 { font-size: 13pt; }
+ h3 { font-size: 11pt; }
+ 
+ table {
+  font-size: 8pt;
+ }
+ 
+ td, th {
+  padding: 6px 8px;
+  min-width: 70px;
+ }
+ 
+ pre {
+  font-size: 7pt;
+ }
+ 
+}
+
+ </style>
+</head>
+<body>
+ <!-- COVER -->
+ <div class="cover">
+ <h1>AI Automation <br>Decision System</h1>
+<h2><div class="subtitle">Practical AI Automation Decision-Making System</div></h2>
+ <div class="subtitle">Free Quick Start</div>
+ <div class="features">
+ <p>✓ Part 1: Introduction to Methodology</p>
+ <p>✓ How to Find Processes for Automation</p>
+ <p>✓ Where to Start</p>
+ <p>✓ Quick Wins</p>
+ </div>
+ <div class="copyright">© 2026 - Free Version</div>
+ </div>
+ 
+ <!-- INTRODUCTION -->
+ <div class="page-break">
+ <h1 style="text-align: center; margin-top: 60px;">INTRODUCTION</h1>
+ 
+ <hr style="margin: 30px 0;">
+ 
+ <h2>ABOUT FREE VERSION</h2>
+ 
+ <p>This is the <strong>free version</strong> of "Practical AI Automation Decision-Making System".</p>
+ 
+ <div class="info-block tip">
+ <strong>✅ WHAT YOU GET IN THIS VERSION:</strong>
+ <ul>
+ <li><strong>Part 1</strong> - complete (concept and quick start)</li>
+ <li>Understanding of <strong>how</strong> to approach automation</li>
+ <li>ROI calculation formulas (can create your own calculator)</li>
+ <li>"What to Automate" checklist</li>
+ <li>Decision-making basics</li>
+ </ul>
+ </div>
+ 
+ <div class="info-block warning">
+ <strong>📦 WHAT'S IN FULL VERSIONS:</strong>
+ <ul>
+ <li><strong>Business Edition ($147):</strong> Full methodology (Parts 1-5) + ROI Calculator Excel + Decision Framework + 7 AI prompts</li>
+ <li><strong>Professional Edition ($297):</strong> Everything from Business + Part 6 (Multi-agent systems, Self-hosted, GDPR Compliance)</li>
+ </ul>
+ </div>
+ 
+ <hr style="margin: 30px 0;">
+ 
+ <h2>WHO THIS PRODUCT IS FOR</h2>
+ 
+ <p><strong>✅ THIS PRACTICAL SYSTEM IS FOR YOU IF:</strong></p>
+ <ul>
+ <li>You own a business or work in a company</li>
+ <li>Spend a lot of time on routine tasks</li>
+ <li>Want to understand what ROI-approach to automation is</li>
+ <li>Not ready to invest in full version yet</li>
+ </ul>
+ 
+ <p><strong>WHAT YOU'LL LEARN:</strong></p>
+ <ul>
+ <li>📊 How to find processes for automation</li>
+ <li>💰 How to calculate if automation is worth it</li>
+ <li>🎯 What to do first</li>
+ <li>🚫 What mistakes to avoid</li>
+ </ul>
+ 
+ <div class="info-block important">
+ <strong>⚠️ IMPORTANT:</strong>
+ <p>This is working material. Study with intention to APPLY, not "for general knowledge".</p>
+ </div>
+ 
+ <hr style="margin: 30px 0;">
+ 
+ <h2>HOW TO USE</h2>
+ 
+ <p><strong>1. STUDY WITH NOTEBOOK</strong><br>
+ → Write down processes from your business</p>
+ 
+ <p><strong>2. COMPLETE ASSIGNMENTS</strong><br>
+ → There are checklists in text - fill them out</p>
+ 
+ <p><strong>3. CALCULATE ROI</strong><br>
+ → Use formulas from book</p>
+ 
+ <p><strong>4. START WITH ONE PROCESS</strong><br>
+ → Don't try to automate everything at once</p>
+ 
+ <div class="info-block tip" style="margin-top: 20px;">
+ <p><strong>TIP:</strong> If after studying you want to continue — full versions have ready-made tools (Excel calculators, prompts, detailed cases) that will save you dozens of hours.</p>
+ </div>
+ 
+ </div>
+
+ <!-- PART 1 -->
+ <div class="page-break">
+<h1>PART 1: QUICK START</h1>
+
+<hr>
+
+<h2>CHAPTER 1.1: WHY YOU NEED THIS AUDIT</h2>
+
+<h3>A Story That Explains Everything</h3>
+
+<p>In fall 2025, I met with an online store owner (Client A). Owner of a sports nutrition online store. Revenue $50k/month. Everything seemed to be working.</p>
+
+<p>He came to me with a question: <em>"I want to implement AI. Where should I start?"</em></p>
+
+<p>I asked: <em>"Why do you need AI?"</em></p>
+
+<p>Him: <em>"Well... everyone's implementing it. Competitors are automating. Need to do something."</em></p>
+
+<p>Classic.</p>
+
+<hr>
+
+<h3>The Modern Entrepreneur's Problem</h3>
+
+<strong>You see:</strong>
+<ul>
+<li>Articles about ChatGPT, Claude, Midjourney</li>
+<li>Competitors automating something (or pretending to)</li>
+<li>Chatbot sellers writing: "We'll increase sales by 300%!"</li>
+<li>Everyone saying: "AI or death"</li>
+</ul>
+
+<strong>And you feel:</strong>
+<ul>
+<li>😰 FOMO (Fear of Missing Out) — "I'm falling behind"</li>
+<li>🤔 Confusion — "how to apply this IN MY BUSINESS?"</li>
+<li>💸 Fear of wasting money — "what if I spend $5k for nothing"</li>
+<li>⏰ No time to figure it out — "when am I supposed to learn all this"</li>
+</ul>
+
+<strong>Result?</strong>
+
+<p>You continue working "the old way", losing $500-5,000/month on manual work.</p>
+
+<p>Which could be automated over a weekend.</p>
+
+<hr>
+
+<h3>What I Did with the Online Store Owner (Client A)</h3>
+
+<p>Instead of immediately selling an "AI solution", I asked:</p>
+
+<em>"Show me your typical day. What do you do? What does your team do?"</em>
+
+<p>In 2 hours of conversation we found:</p>
+<ul>
+<li>✅ 4 processes eating up 15 hours of work per week</li>
+<li>✅ 3 tools that could be integrated (instead of manual data transfer)</li>
+<li>✅ 1 bottleneck slowing growth (order processing)</li>
+</ul>
+
+<strong>We calculated:</strong>
+<ul>
+<li>Current costs: $2,800/month (salary on routine)</li>
+<li>Automation: $1,500 one-time + $200/month</li>
+<li>Savings: $2,600/month</li>
+<li>Payback: 0.6 months (3 weeks!)</li>
+</ul>
+
+<p>A month later, Client A implemented:</p>
+<ul>
+<li>Automatic order processing (Shopify + Zapier)</li>
+<li>Chatbot for typical questions (Tidio)</li>
+<li>Auto-reports (Google Sheets + scripts)</li>
+</ul>
+
+<strong>Result:</strong>
+<ul>
+<li>Freed up 60 hours/month (1.5 weeks of work!)</li>
+<li>Saved $31,200 per year</li>
+<li>Scaled business without hiring new staff</li>
+</ul>
+
+<hr>
+
+<h3>Why This Isn't About "AI"</h3>
+
+<p>Notice: I never once said <em>"let's implement a neural network"</em>.</p>
+
+<p>I asked: <em>"Where are you losing money?"</em></p>
+
+<strong>AI is just a tool.</strong>
+
+<p>Like a calculator. Or Excel. Or a phone.</p>
+
+<p>First you find the problem.</p>
+<p>Then you choose the tool to solve it.</p>
+
+<p>Sometimes it's AI (ChatGPT for content, Claude for analysis).</p>
+<p>Sometimes it's just integrating two services (Zapier).</p>
+<p>Sometimes it's changing the process entirely (no technology).</p>
+
+<hr>
+
+<h3>Why You Need This Audit</h3>
+
+<strong>This guide will help you do the same thing I did with the online store owner (Client A):</strong>
+
+<ul>
+<li><strong>Find processes that are "bleeding" money</strong></li>
+</ul>
+<p>(not all processes — only those that pay off to automate)</p>
+
+<ul>
+<li><strong>Calculate ROI before investing</strong></li>
+</ul>
+<p>(so you don't waste money on a "trendy solution")</p>
+
+<ul>
+<li><strong>Choose the right tools</strong></li>
+</ul>
+<p>(not the most expensive, but the ones right for you)</p>
+
+<ul>
+<li><strong>Create an action plan</strong></li>
+</ul>
+<p>(what to do first, second, third)</p>
+
+<ul>
+<li><strong>Do it yourself</strong></li>
+</ul>
+<p>(without $5,000 consultants)</p>
+
+<hr>
+
+<h3>What You'll Get Specifically</h3>
+
+<strong>After completing this audit you'll have:</strong>
+
+<p>📊 <strong>A list of 3-5 processes to automate</strong></p>
+<p>Prioritized by ROI</p>
+
+<p>💰 <strong>Savings calculation</strong></p>
+<p>How much you'll save per month/year</p>
+
+<p>🛠️ <strong>Specific tools</strong></p>
+<p>SaaS names, prices, how to implement</p>
+
+<p>📅 <strong>Roadmap</strong></p>
+<p>What to do first, what next</p>
+
+<p>⏱️ <strong>Time:</strong></p>
+<ul>
+<li>For audit: 2-3 hours</li>
+<li>For implementing first process: 1-2 weeks</li>
+<li>Until first results: one month</li>
+</ul>
+
+<hr>
+
+<h3>What It Costs (If You DON'T Do It)</h3>
+
+<p>Let's say in your business there are 3 processes that could be automated.</p>
+
+<strong>Each saves a modest $500/month.</strong>
+
+<strong>If you DON'T do the audit:</strong>
+<ul>
+<li>Per year you'll lose: $18,000</li>
+<li>Over 3 years: $54,000</li>
+</ul>
+
+<strong>If you do it:</strong>
+<ul>
+<li>You'll spend: 2-3 hours of time</li>
+<li>You'll invest: $500-2,000 on automation</li>
+<li>Pays off: in 1-3 months</li>
+<li>You'll save: $18k/year</li>
+</ul>
+
+<p>The $18,000 difference is worth one weekend, right?</p>
+
+<hr>
+
+<h3>Three Types of Business Owners</h3>
+
+<p>After a hundred audits, I noticed a pattern.</p>
+
+<strong>Type 1: "I don't need automation"</strong>
+<ul>
+<li>Thinks: "I have a small business, why do I need this"</li>
+<li>Works 60+ hours per week</li>
+<li>Can't scale (no time)</li>
+<li>Losing money on routine</li>
+</ul>
+
+<strong>Type 2: "I want to automate but don't know how"</strong>
+<ul>
+<li>Reads articles about AI</li>
+<li>Tries different tools chaotically</li>
+<li>Spends money without a system</li>
+<li>Gets disappointed and quits</li>
+</ul>
+
+<strong>Type 3: "I do it systematically"</strong>
+<ul>
+<li>First audit → then implementation</li>
+<li>Calculates ROI before investing</li>
+<li>Automates step by step</li>
+<li>Scales and grows</li>
+</ul>
+
+<strong>This guide will move you from type 1 or 2 to type 3.</strong>
+
+<hr>
+
+<h3>What WON'T Be in This Guide</h3>
+
+<p>Let's be honest, so there are no false expectations.</p>
+
+<ul>
+<li><strong>There won't be:</strong> A "magic button"</li>
+</ul>
+<p>Automation requires implementation (from a week to a month per process)</p>
+
+<ul>
+<li><strong>There won't be:</strong> "One solution for everything"</li>
+</ul>
+<p>Different processes = different tools</p>
+
+<ul>
+<li><strong>There won't be:</strong> "We'll do everything for you"</li>
+</ul>
+<p>This is a DIY guide, you do it yourself (or with a contractor)</p>
+
+<ul>
+<li><strong>There won't be:</strong> Theory about neural networks</li>
+</ul>
+<p>Only practice and concrete steps</p>
+
+<hr>
+
+<h3>What WILL Be Here</h3>
+
+<ul>
+<li><strong>Step-by-step audit process</strong></li>
+</ul>
+<p>What to do, in what order</p>
+
+<ul>
+<li><strong>Ready-made checklists and prompts</strong></li>
+</ul>
+<p>Copy-paste and use</p>
+
+<ul>
+<li><strong>Real cases with numbers</strong></li>
+</ul>
+<p>Not theory, but practice</p>
+
+<ul>
+<li><strong>Specific tools with prices</strong></li>
+</ul>
+<p>You know what to buy and how much to pay</p>
+
+<ul>
+<li><strong>ROI calculator</strong></li>
+</ul>
+<p>Calculate savings before investing</p>
+
+<hr>
+
+<h3>Ready?</h3>
+
+<p>If you've read this far — you're already in the top 10% of entrepreneurs.</p>
+
+<p>Most close such guides on the second page and continue "working the old way".</p>
+
+<p>You're different.</p>
+
+<p>You want to figure it out.</p>
+
+<p>Let's do your first audit.</p>
+
+<hr>
+
+<strong>Next chapter:</strong> How the methodology works
+
+<hr>
+
+<h2>CHAPTER 1.2: HOW THE METHODOLOGY WORKS</h2>
+
+<h3>The Big Picture (5 Steps)</h3>
+
+<p>The entire audit process fits into 5 simple steps:</p>
+
+<p><pre><code>STEP 1: Process Inventory
+ ↓
+STEP 2: Analysis with AI
+ ↓
+STEP 3: ROI Calculation
+ ↓
+STEP 4: Prioritization
+ ↓
+STEP 5: Action Plan</code></pre></p>
+
+<p>Let's go through each one.</p>
+
+<hr>
+
+<h3>STEP 1: Process Inventory (30 minutes)</h3>
+
+<strong>What you do:</strong>
+<p>Write down all repeating processes in your business.</p>
+
+<strong>How:</strong>
+<p>1. Open the e-commerce checklist (it's in Part 2)</p>
+<p>2. Answer questions about your store</p>
+<p>3. Fill in a simple table:</p>
+
+<table>
+<tr>
+<td>Process</td>
+<td>Who does it</td>
+<td>How much time</td>
+<td>How often</td>
+</tr>
+<tr>
+<td>Order processing</td>
+<td>Manager O.</td>
+<td>3 hours/day</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>Social media replies</td>
+<td>Myself</td>
+<td>1 hour/day</td>
+<td>Daily</td>
+</tr>
+<tr>
+<td>And so on...</td>
+</tr>
+</table>
+
+<strong>Result:</strong>
+<p>A list of 10-15 processes with time costs.</p>
+
+<hr>
+
+<h3>STEP 2: Analysis with AI (45 minutes)</h3>
+
+<strong>What you do:</strong>
+<p>Take a ready-made prompt from this guide, insert your data, send to Claude/ChatGPT.</p>
+
+<strong>Example prompt:</strong>
+
+<p><pre><code>Hello! I own an online store [your niche].
+
+Here are my main processes:
+1. [process 1] — [time]
+2. [process 2] — [time]
+...
+
+Help me:
+1. Find processes that can be automated
+2. Suggest specific tools
+3. Estimate implementation complexity</code></pre></p>
+
+<strong>AI will tell you:</strong>
+<ul>
+<li>Which processes to automate</li>
+<li>Which tools to use (with names)</li>
+<li>Approximate cost and complexity</li>
+</ul>
+
+<strong>Result:</strong>
+<p>A list of 3-7 processes to automate with recommendations.</p>
+
+<hr>
+
+<h3>STEP 3: ROI Calculation (30 minutes)</h3>
+
+<strong>What you do:</strong>
+<p>Take the ROI calculator (Excel file, included), enter data.</p>
+
+<strong>What you enter:</strong>
+<ul>
+<li>Current costs (salary × time on process)</li>
+<li>Automation cost (one-time + monthly)</li>
+<li>Expected time reduction (usually 50-80%)</li>
+</ul>
+
+<strong>Calculator will show:</strong>
+<ul>
+<li>Monthly savings</li>
+<li>Payback period</li>
+<li>Annual ROI</li>
+</ul>
+
+<strong>Example:</strong>
+
+<p><pre><code>Process: Order processing
+Current costs: $800/month
+Automation cost: $500 + $50/month
+Time savings: 70%
+
+Result:
+→ Savings: $560/month
+→ Payback: 0.9 months (27 days)
+→ Annual ROI: $6,220</code></pre></p>
+
+<strong>Result:</strong>
+<p>You know exactly which processes pay off to automate and which don't.</p>
+
+<hr>
+
+<h3>STEP 4: Prioritization (15 minutes)</h3>
+
+<strong>What you do:</strong>
+<p>Arrange processes by "Value × Complexity" matrix.</p>
+
+<p><pre><code> 
+       HIGH VALUE
+            ↑
+ [3]        | [1]
+ Medium ROI | Best ROI
+ Hard       | Easy
+ ───────────┼───────────→ LOW COMPLEXITY
+            |      
+ [4]        | [2] 
+ Poor ROI   | Quick wins
+ Hard       | Easy
+            ↓
+      LOW VALUE</code></pre></p>
+
+<strong>Quadrant [1]: DO FIRST</strong>
+<ul>
+<li>High ROI + Easy to implement</li>
+<li>Example: Social media auto-responder</li>
+</ul>
+
+<strong>Quadrant [2]: QUICK WINS</strong>
+<ul>
+<li>Low ROI, but very simple</li>
+<li>Example: Email templates</li>
+</ul>
+
+<strong>Quadrant [3]: DO SECOND</strong>
+<ul>
+<li>High ROI, but complex</li>
+<li>Example: CRM integration with warehouse</li>
+</ul>
+
+<strong>Quadrant [4]: DON'T DO</strong>
+<ul>
+<li>Low ROI + Complex</li>
+<li>Example: Custom development for minor tasks</li>
+</ul>
+
+<strong>Result:</strong>
+<p>You understand in what order to automate.</p>
+
+<hr>
+
+<h3>STEP 5: Action Plan (30 minutes)</h3>
+
+<strong>What you do:</strong>
+<p>Create a roadmap for 1-3-6 months.</p>
+
+<strong>Example plan:</strong>
+
+<strong>Month 1: Quick wins</strong>
+<ul>
+<li>Week 1-2: Chatbot for typical questions</li>
+<li>Week 3-4: Email automation</li>
+<li>Result: -20 hours of work/month</li>
+</ul>
+
+<strong>Month 2-3: Main projects</strong>
+<ul>
+<li>Order processing integration</li>
+<li>Auto-reports</li>
+<li>Result: -40 hours/month, savings $2k/month</li>
+</ul>
+
+<strong>Month 4-6: Optimization</strong>
+<ul>
+<li>Refinements</li>
+<li>Team training</li>
+<li>Scaling</li>
+</ul>
+
+<strong>Result:</strong>
+<p>A concrete plan of what to do and when.</p>
+
+<hr>
+
+<h3>How Long Will This Take?</h3>
+
+<strong>For the audit itself:</strong>
+<ul>
+<li>Step 1: 30 minutes</li>
+<li>Step 2: 45 minutes</li>
+<li>Step 3: 30 minutes</li>
+<li>Step 4: 15 minutes</li>
+<li>Step 5: 30 minutes</li>
+</ul>
+<strong>TOTAL: 2.5 hours of pure work</strong>
+
+<p>(In practice will stretch over an evening or two, with breaks for thinking)</p>
+
+<strong>For implementation:</strong>
+<ul>
+<li>First process: 1-2 weeks</li>
+<li>Others: as ready</li>
+</ul>
+
+<hr>
+
+<h3>What If I Get Stuck?</h3>
+
+<strong>Three common problems:</strong>
+
+<strong>Problem 1: "AI gives general advice, not specific tools"</strong>
+
+<strong>Solution:</strong>
+<p>Clarify the prompt. Add:</p>
+<p><pre><code>Name specific SaaS solutions with prices.
+Which exact integrations to set up?</code></pre></p>
+
+<hr>
+
+<strong>Problem 2: "Don't know how to calculate hourly cost"</strong>
+
+<strong>Solution:</strong>
+<p>Simple formula:</p>
+<p><pre><code>Monthly employee salary ÷ 160 hours = hourly cost
+
+Example:
+$1,600/month ÷ 160 hours = $10/hour</code></pre></p>
+
+<p>If you do it yourself:</p>
+<p><pre><code>Desired salary ÷ 160 hours = your hourly cost</code></pre></p>
+
+<hr>
+
+<strong>Problem 3: "I have too many processes, don't know where to start"</strong>
+
+<strong>Solution:</strong>
+<p>Choose top-3 most expensive (by time).</p>
+<p>Only analyze those.</p>
+
+<p>80/20 rule: 20% of processes consume 80% of time.</p>
+<p>Find that 20%.</p>
+
+<hr>
+
+<h3>What to Expect (Realistically)</h3>
+
+<strong>After the audit:</strong>
+<ul>
+<li>✅ You'll understand where you're losing money (100% guarantee)</li>
+<li>✅ Find 3-5 processes to automate</li>
+<li>✅ Calculate ROI</li>
+<li>❌ Automation NOT yet implemented (that's the next step)</li>
+</ul>
+
+<strong>After implementing the first process (1-2 weeks):</strong>
+<ul>
+<li>✅ Free up 5-15 hours/month</li>
+<li>✅ Start saving money</li>
+<li>⚠️ There will be minor bugs (first days of adaptation)</li>
+</ul>
+
+<strong>In 1-3 months:</strong>
+<ul>
+<li>✅ Automation works stably</li>
+<li>✅ Team adapted</li>
+<li>✅ See real savings</li>
+<li>🚀 Can scale</li>
+</ul>
+
+<hr>
+
+<h3>Important Clarification</h3>
+
+<p>This methodology is not magic.</p>
+
+<strong>It will NOT:</strong>
+<ul>
+<li>❌ Do the work for you</li>
+<li>❌ Implement automatically</li>
+<li>❌ Make your business successful (if it's originally bad)</li>
+</ul>
+
+<strong>It WILL:</strong>
+<ul>
+<li>✅ Show where you're losing money</li>
+<li>✅ Give you a concrete plan</li>
+<li>✅ Save you thousands of hours and dollars</li>
+</ul>
+
+<p>The rest is your work.</p>
+
+<p>But with a clear plan, the work becomes 10 times easier.</p>
+
+<hr>
+
+<h3>Summary: How It Works</h3>
+
+<p><pre><code>1. Write down processes (30 min)
+ ↓
+2. AI analyzes (45 min)
+ ↓
+3. Calculate ROI (30 min)
+ ↓
+4. Prioritize (15 min)
+ ↓
+5. Create plan (30 min)
+ ↓
+RESULT: You understand what to do</code></pre></p>
+
+<hr>
+
+<strong>Ready to start?</strong>
+
+<p>In the next chapter I'll give you everything needed to start:</p>
+<ul>
+<li>How to register with Claude</li>
+<li>How to use prompts</li>
+<li>How to work with the calculator</li>
+</ul>
+
+<p>In 20 minutes you'll be ready for the audit.</p>
+
+<hr>
+
+
+
+<h2>CHAPTER 1.3: QUICK PREPARATION</h2>
+
+<h3>What You'll Need</h3>
+
+<p>For the audit you need a minimal set:</p>
+
+<strong>Required:</strong>
+<ul>
+<li>✅ Computer / laptop</li>
+<li>✅ 2-3 hours of time</li>
+<li>✅ Access to Claude or ChatGPT (free version works)</li>
+<li>✅ Excel or Google Sheets (for calculator)</li>
+</ul>
+
+<strong>Recommended:</strong>
+<ul>
+<li>✅ Data about your business:</li>
+<li>How many orders/day</li>
+<li>Who and how much time spends on processes</li>
+<li>Employee salaries (at least approximately)</li>
+</ul>
+
+<strong>NOT needed:</strong>
+<ul>
+<li>❌ Paid AI subscription (free is enough)</li>
+<li>❌ Programming skills</li>
+<li>❌ Advanced Excel knowledge</li>
+</ul>
+
+<hr>
+
+<h3>Claude Registration (5 minutes)</h3>
+
+<p>Claude is an AI assistant from Anthropic. It's best suited for business analysis.</p>
+
+<strong>Step 1: Go to claude.ai</strong>
+<ul>
+<li>Open browser</li>
+<li>Enter: <code>claude.ai</code></li>
+</ul>
+
+<strong>Step 2: Sign up</strong>
+<ul>
+<li>Click "Sign Up"</li>
+<li>Enter email</li>
+<li>Confirm email (you'll receive a letter)</li>
+</ul>
+
+<strong>Step 3: Choose plan</strong>
+<ul>
+<li><strong>Free</strong> — works for the audit</li>
+<li><strong>Pro</strong> ($20/month) — if you want more requests (optional)</li>
+</ul>
+
+<p>For one audit, the free version is enough.</p>
+
+<strong>Done!</strong> Now you have access to Claude.
+
+<hr>
+
+<h3>Alternative: ChatGPT</h3>
+
+<p>If you prefer ChatGPT:</p>
+
+<strong>Go to chat.openai.com</strong>
+<ul>
+<li>Sign up (if you haven't already)</li>
+<li>Free version (GPT-3.5) works</li>
+<li>Paid ($20/month, GPT-4) — better, but optional</li>
+</ul>
+
+<strong>The prompts in this guide work with both AIs.</strong>
+
+<p>Just use whichever is more convenient for you.</p>
+
+<hr>
+
+<h3>How to Use Prompts</h3>
+
+<p>A prompt is an instruction for AI. Like a Google query, but more detailed.</p>
+
+<strong>In this guide you'll find ready-made prompts.</strong>
+
+<p>Here's how to use them:</p>
+
+<strong>Step 1: Find the prompt in the guide</strong>
+<p>They'll be in boxes like this:</p>
+
+<p><pre><code>[PROMPT]
+Hello! I own an online store...</code></pre></p>
+
+<strong>Step 2: Copy the prompt text</strong>
+<ul>
+<li>Select all text</li>
+<li>Ctrl+C (or Cmd+C on Mac)</li>
+</ul>
+
+<strong>Step 3: Paste into Claude/ChatGPT</strong>
+<ul>
+<li>Open chat with AI</li>
+<li>Paste prompt (Ctrl+V)</li>
+</ul>
+
+<strong>Step 4: Replace [FILL IN] with your data</strong>
+<p>In prompts there will be places like:</p>
+<p><pre><code>My niche: [FILL IN]
+Number of orders: [FILL IN]</code></pre></p>
+
+<p>Replace with your data:</p>
+<p><pre><code>My niche: sports nutrition
+Number of orders: 50/day</code></pre></p>
+
+<strong>Step 5: Send</strong>
+<ul>
+<li>Press Enter</li>
+<li>Wait for response (10-30 seconds)</li>
+</ul>
+
+<strong>Step 6: Clarify if needed</strong>
+<p>AI might give a general answer.</p>
+
+<p>Then add:</p>
+<p><pre><code>Give specific tool names with prices.</code></pre></p>
+
+<p>And it will clarify.</p>
+
+<hr>
+
+<h3>How to Work with the ROI Calculator</h3>
+
+<p>The ROI calculator is an Excel file that automatically calculates savings.</p>
+
+<strong>How to open:</strong>
+<p>1. Download file <code>ROI_Calculator.xlsx</code> (included)</p>
+<p>2. Open in Excel or Google Sheets</p>
+
+<strong>How to fill in:</strong>
+
+<strong>Sheet 1: Instructions</strong>
+<ul>
+<li>Read how to use (2 minutes)</li>
+</ul>
+
+<strong>Sheet 2: Calculator</strong>
+<p>Enter data in yellow cells:</p>
+
+<p><pre><code>[A] CURRENT STATE
+Process: Order processing
+Who does it: Manager O.
+Time per day: 3 hours
+Working days per month: 22
+Cost per hour: $10
+
+[B] AUTOMATION
+One-time costs: $500
+Monthly costs: $50
+Time reduction: 70%</code></pre></p>
+
+<strong>Sheet 3: Results</strong>
+<ul>
+<li>Will automatically calculate:</li>
+<li>Monthly savings</li>
+<li>Payback period</li>
+<li>Annual ROI</li>
+<li>Charts</li>
+</ul>
+
+<strong>Don't know what numbers to enter?</strong>
+
+<p>Use AI! Ask:</p>
+<p><pre><code>How much does order processing automation typically cost 
+for an online store with 50 orders/day?</code></pre></p>
+
+<hr>
+
+<h3>Frequently Asked Questions (FAQ)</h3>
+
+<strong>Q: I don't know exactly how much time processes take. What to do?</strong>
+
+<p>A: Estimate roughly. Or time it for one day.</p>
+
+<p>Example:</p>
+<ul>
+<li>Today time how long manager processes orders</li>
+<li>Multiply by 22 working days</li>
+<li>Enter in calculator</li>
+</ul>
+
+<p>±20% accuracy is not critical.</p>
+
+<hr>
+
+<strong>Q: I have no employees, I do everything myself. How to calculate hourly cost?</strong>
+
+<p>A: Ask yourself: <em>"How much do I want to earn?"</em></p>
+
+<p>Example:</p>
+<ul>
+<li>Want $3,000/month</li>
+<li>3000 ÷ 160 hours = $18.75/hour</li>
+<li>That's your hourly cost</li>
+</ul>
+
+<p>Or:</p>
+<ul>
+<li>How much does it cost to hire a freelancer for this task?</li>
+<li>Use that number</li>
+</ul>
+
+<hr>
+
+<strong>Q: ChatGPT gives different answers each time. Is this normal?</strong>
+
+<p>A: Yes, normal. AI generates text probabilistically.</p>
+
+<p>What to do:</p>
+<ul>
+<li>If answer too general → clarify prompt</li>
+<li>If completely wrong → rephrase question</li>
+<li>Can ask same question 2-3 times and choose best answer</li>
+</ul>
+
+<hr>
+
+<strong>Q: Do I need to pay for Claude Pro / ChatGPT Plus?</strong>
+
+<p>A: No, for one audit free version is enough.</p>
+
+<p>Paid is needed if:</p>
+<ul>
+<li>You'll do many audits (for different projects)</li>
+<li>Want faster and more detailed answers</li>
+</ul>
+
+<p>For the first time — free is sufficient.</p>
+
+<hr>
+
+<strong>Q: I'm not good with Excel. Will the calculator be complicated?</strong>
+
+<p>A: No. You just enter numbers in yellow cells.</p>
+
+<p>Everything else calculates automatically.</p>
+
+<p>If really not comfortable with Excel:</p>
+<ul>
+<li>Open in Google Sheets (simpler)</li>
+<li>Or calculate manually by formula:</li>
+</ul>
+
+<p><pre><code>Savings = (Time × Hourly cost × Reduction%) - Monthly costs</code></pre></p>
+
+<hr>
+
+<strong>Q: How many AI requests will I need?</strong>
+
+<p>A: Usually 3-5 requests for entire audit.</p>
+
+<p>Example:</p>
+<p>1. Process analysis → 1 request</p>
+<p>2. Tool clarification → 1 request</p>
+<p>3. Help with roadmap → 1 request</p>
+
+<p>This fits within free version limits.</p>
+
+<hr>
+
+<h3>Preparation Checklist</h3>
+
+<p>Before starting audit check:</p>
+
+<strong>Tools:</strong>
+<ul>
+<li>[ ] Claude or ChatGPT (registered)</li>
+<li>[ ] ROI calculator (downloaded and opens)</li>
+<li>[ ] Notepad or Google Docs (for notes)</li>
+</ul>
+
+<strong>Data:</strong>
+<ul>
+<li>[ ] Roughly know how many orders you process</li>
+<li>[ ] Roughly know how much time processes take</li>
+<li>[ ] Roughly know salaries (or cost of your time)</li>
+</ul>
+
+<strong>Mindset:</strong>
+<ul>
+<li>[ ] Allocated 2-3 hours (no one disturbing)</li>
+<li>[ ] Ready to honestly answer uncomfortable questions about business</li>
+<li>[ ] Set to take action (not just "read")</li>
+</ul>
+
+<hr>
+
+<strong>If everything's ready:</strong>
+
+<ul>
+<li>You have AI access</li>
+<li>Calculator opens</li>
+<li>Have 2-3 hours of time</li>
+</ul>
+
+<strong>→ Move to Part 2</strong>
+
+<p>That's where your e-commerce audit begins.</p>
+
+<hr>
+
+<strong>If something's unclear:</strong>
+
+<p>Reread this chapter.</p>
+
+<p>Or ask AI:</p>
+<p><pre><code>I'm reading a business audit guide. 
+Don't understand how [your question]. 
+Explain in simple terms.</code></pre></p>
+
+<p>AI will explain.</p>
+
+<hr>
+
+<strong>Ready? Let's do the audit!</strong>
+
+<hr>
+
+
+ </div>
+
+ <!-- PART 2 -->
+ <div id="part2" class="page-break">
+ <div class="part-number">PART 2</div>
+
+<hr>
+
+<em>End of free Part 1: Quick Start</em>
+
+<hr>
+
+<!-- UPGRADE SECTION -->
+<div style="background: #FFF9E6; padding: 30px; border: 3px solid #FFB800; margin: 40px 0; border-radius: 10px;">
+ <h2 style="color: #FFB800; text-align: center; margin-top: 0;">🎯 WANT TO GO DEEPER?</h2>
+ 
+ <p style="font-size: 11pt; line-height: 1.6; opacity: 0.95;">
+ Part 1 provides concept of ROI-First approach. Full methodology includes:
+ </p>
+ 
+ <ul style="font-size: 11pt; line-height: 1.6; opacity: 0.95;">
+ <li>Parts 2-5 (detailed process analysis, architecture, anti-patterns)</li>
+ <li>ROI Calculator (Excel with formulas)</li>
+ <li>Decision Framework (automated scoring)</li>
+ <li>7 AI prompts for various tasks</li>
+ <li>Detailed case studies with metrics</li>
+ </ul>
+ 
+ <p style="font-size: 11pt; line-height: 1.6; margin-top: 15px; opacity: 0.95;">
+ Information about full version and advanced editions available on website.
+ </p>
+</div>
+
+<div style="background: #F0F8FF; padding: 25px; border-left: 5px solid #3498DB; margin: 40px 0;">
+ <h3 style="color: #3498DB; margin-top: 0;">📚 NEXT STEPS</h3>
+ 
+ <p><strong>1. Apply concept from Part 1</strong></p>
+ <p>Find 1-3 processes in your business that can be automated</p>
+ 
+ <p><strong>2. Use free tools</strong></p>
+ <p>Study Mini Case Study and Basic AI Prompt</p>
+ 
+ <p><strong>3. Start simple</strong></p>
+ <p>Automate 1 process using Zapier or Make.com</p>
+ 
+ <p><strong>4. Measure result</strong></p>
+ <p>How much time/money saved? That's your first ROI!</p>
+</div>
+
+ 
+ <!-- FOOTER -->
+ <div class="footer">
+ <hr>
+ <p style="text-align: center; margin: 20px 0;">
+ 
+ 
+ <strong><a href="https://www.linkedin.com/in/kholomyanskiy/">Feedback on 💼 LinkedIn:</a></strong> 
+ </p>
+ <hr>
+ <p style="text-align: center;">© 2026 AI Automation Decision System</p>
+ <p style="margin-top: 10px; font-size: 8pt; text-align: center;">
+ This is free version (Part 1: Quick Start)
+ </div>
+</body>
+</html>
