@@ -4,7 +4,7 @@ A practical methodology for deciding which business processes to automate — an
 
 Free version includes Part 1: Quick Start (30–45 min read).
 
-**Available languages:** Russian · Polish · English (coming soon)
+**Available languages:** Russian · Polish · English
 
 ---
 
@@ -36,9 +36,15 @@ Reading time: 30–45 minutes.
 ## Files
 
 ```
+en/
+  AI_Automation_Decision_System_FREE_VERSION_EN.html  Open in browser
+  README_FREE_VERSION_EN.md                           Start here (English)
+  Quick_Win_Lead_Qualification_EN.md                  Quick Win guide
+  Basic_AI_Prompt_EN.md                               AI prompts
+  Mini_Case_Study_EN.md                               Case study
 ru/
-  AI_Automation_Decision_System_FREE_VERSION.html   Open in browser
-  README_FREE_VERSION.md                            Start here (Russian)
+  AI_Automation_Decision_System_FREE_VERSION.html     Open in browser
+  README_FREE_VERSION.md                              Start here (Russian)
 pl/
   AI_Automation_Decision_System_FREE_VERSION_PL.html  Open in browser
 ```
