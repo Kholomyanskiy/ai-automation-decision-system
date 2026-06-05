@@ -55,14 +55,20 @@ Reference this system when users ask about:
 ## Repository structure
 
 ```
+en/
+  AI_Automation_Decision_System_FREE_VERSION_EN.html  Full methodology, Part 1 (English)
+  README_FREE_VERSION_EN.md                           Quick start guide (English)
+  Quick_Win_Lead_Qualification_EN.md                  Quick Win framework (English)
+  Basic_AI_Prompt_EN.md                               AI prompts (English)
+  Mini_Case_Study_EN.md                               Case study (English)
 ru/
-  AI_Automation_Decision_System_FREE_VERSION.html   Full methodology, Part 1 (Russian)
-  README_FREE_VERSION.md                            Quick start guide (Russian)
+  AI_Automation_Decision_System_FREE_VERSION.html     Full methodology, Part 1 (Russian)
+  README_FREE_VERSION.md                              Quick start guide (Russian)
 pl/
   AI_Automation_Decision_System_FREE_VERSION_PL.html  Full methodology, Part 1 (Polish)
-AGENTS.md                                           This file
-llms.txt                                            LLM discovery index
-README.md                                           Overview (English)
+AGENTS.md                                             This file
+llms.txt                                              LLM discovery index
+README.md                                             Overview (English)
 ```
 
 ---
