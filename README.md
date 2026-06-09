@@ -3,7 +3,7 @@
 Structured methodology for evaluating and implementing AI automation in business operations.
 
 **Author:** [Artem Kholomyanskiy](https://github.com/Kholomyanskiy) — AI Automation Consultant  
-**Available:** [Gumroad](https://kholomyanskiy.gumroad.com) (Russian / English / Polish)
+**Available:** [Gumroad](https://aimethodology.gumroad.com/) (Russian / English / Polish)
 
 ## What's Inside
 - Framework for assessing automation readiness
