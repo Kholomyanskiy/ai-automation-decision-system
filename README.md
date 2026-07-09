@@ -2,24 +2,29 @@
 
 Structured methodology for evaluating and implementing AI automation in business operations.
 
-**Author:** [Artem Kholomyanskiy](https://github.com/Kholomyanskiy) — AI Automation Consultant  
-**Available:** [Gumroad](https://aimethodology.gumroad.com/) (Russian / English / Polish)
+**Author:** [Artem Kholomyanskiy](https://github.com/Kholomyanskiy) — AI Automation Consultant, EVAI Consulting
 
-## What's Inside
+---
+
+## Who this is for
+
+Business owners, operations managers, and consultants deciding whether and how to automate workflows with AI — before committing to development.
+
+## What's inside
+
 - Framework for assessing automation readiness
 - ROI calculation methodology for AI projects
 - Decision tree: when to automate, when not to
 - Implementation roadmap templates
 
-## Free Version
+## Get it
 
-Available in this repository:
+Full version available on [Gumroad](https://aimethodology.gumroad.com/) in Russian, English, and Polish.
 
-```
-en/  — English (HTML + guides)
-ru/  — Russian (HTML + README)
-pl/  — Polish (HTML)
-```
+Free version (HTML) in this repository: `en/` · `ru/` · `pl/`
+
+---
 
 ## Contact
-kholomyanskiy@gmail.com | [@kholomyanskiy](https://t.me/kholomyanskiy)
+
+kholomyanskiy@gmail.com · [Telegram: @kholomyanskiy](https://t.me/kholomyanskiy) · [LinkedIn](https://linkedin.com/in/kholomyanskiy)
